@@ -1,10 +1,10 @@
 :root {
-    --accent: #da5d78;
-    --accent-brighter: #da5d78;
+    --accent: #2196f3;
+    --accent-brighter: #3da8ff;
     --accent-hover: #003a69;
     --accent-text: #63ffff;
     --accent-secondary: #9b761e;
-    --thread-bg: #5db1b6;
+    --thread-bg: #303030;
     --thread-bg-read: #1c1c1c;
     --thread-bg-sticky: #572121;
     --thread-bg-sticky2: #573521;
