@@ -1,0 +1,609 @@
+:root {
+    --accent: #2196f3;
+    --accent-brighter: #3da8ff;
+    --accent-hover: #003a69;
+    --accent-text: #63ffff;
+    --accent-secondary: #9b761e;
+    --thread-bg: #303030;
+    --thread-bg-read: #1c1c1c;
+    --thread-bg-sticky: #572121;
+    --thread-bg-sticky2: #573521;
+    --thread-separator: #202020;
+    --text-color: #dadada;
+    --text-dim-color: #b3b3b3;
+    --gold: rgba(252, 190, 32, 1);
+    --darker: #1b1b1b;
+    --bg-opacity: 0.71;
+}
+
+
+/*===== General =====*/
+
+html {
+    /*background: var(--darker);*/
+}
+
+#forum {
+    background: var(--thread-bg);
+}
+
+body {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+strong {
+    color: #ececec;
+}
+
+#header {
+    background: var(--thread-bg);
+    border: 1px solid var(--darker);
+}
+
+#header #toolbar {
+    border-color: var(--darker);
+}
+
+#header .navbar-main.navbar.is-dark .navbar-start:after {
+    color: var(--text-color);
+}
+
+#header #toolbar {
+    background: var(--thread-bg-sticky);
+}
+
+#header #toolbar .navbar-item {
+    color: var(--text-color);
+}
+
+#header #toolbar .navbar-item:hover:not(.is-breadcrumb) {
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+#header #toolbar .navbar-item .count-badge {
+    background: var(--accent);
+    color: var(--accent-text);
+    border-color: var(--accent-text);
+}
+
+.drawer-container>.drawer {
+    background: var(--darker);
+    border-right: 1px solid var(--darker);
+}
+
+.drawer-container>.drawer>.drawer-section {
+    background: var(--thread-bg);
+    color: var(--text-color);
+}
+
+.drawer-container>.drawer>.drawer-section>.drawer-head {
+    color: var(--text-color);
+}
+
+.drawer-container>.drawer>.drawer-section>.drawer-content {
+    border-color: var(--darker);
+    background: var(--thread-bg);
+}
+
+#wrapper #content {
+    border-color: var(--darker);
+}
+
+.drawer-container>.drawer>.drawer-section>.drawer-content .forumevent .timeago {
+    background: var(--thread-bg-sticky);
+}
+
+.button.is-primary {
+    background: var(--accent);
+    color: var(--text-color);
+}
+
+.button.is-warning {
+    background-color: #ad8500;
+    color: var(--text-color);
+}
+
+.drawer-container>.drawer>.drawer-section>.drawer-content .thread>.meta,
+.drawer-container>.drawer>.drawer-section>.drawer-content .thread>.meta a {
+    color: var(--text-dim-color);
+}
+
+.tooltip.is-primary:after {
+    background-color: var(--accent);
+}
+
+.tooltip.is-top.is-primary:before {
+    border-top: 6px solid var(--accent);
+}
+
+
+/*===== Drop down stuff =====*/
+
+.dropdown-content,
+.dropdown-content:hover,
+.dropdown-item,
+.dropdown .dropdown-menu .has-link a {
+    color: var(--text-color) !important;
+    background-color: var(--thread-bg);
+}
+
+a.dropdown-item:hover,
+.dropdown .dropdown-menu .has-link a:hover {
+    background: var(--accent);
+    color: var(--text-color);
+}
+
+.alert-component .dropdown-item .alert-dropdown .alert-item.alert-seen>a,
+.alert-component .dropdown .dropdown-menu .has-link a .alert-dropdown .alert-item.alert-seen>a,
+.dropdown .dropdown-menu .has-link .alert-component a .alert-dropdown .alert-item.alert-seen>a,
+.alert-component .dropdown-item .alert-dropdown .alert-item>a,
+.alert-component .dropdown .dropdown-menu .has-link a .alert-dropdown .alert-item>a,
+.dropdown .dropdown-menu .has-link .alert-component a .alert-dropdown .alert-item>a,
+.alert-component .dropdown-item .alert-header .title,
+.alert-component .dropdown .dropdown-menu .has-link a .alert-header .title,
+.dropdown .dropdown-menu .has-link .alert-component a .alert-header .title,
+.alert-component .dropdown-item .alert-header .controls,
+.alert-component .dropdown .dropdown-menu .has-link a .alert-header .controls,
+.dropdown .dropdown-menu .has-link .alert-component a .alert-header .controls {
+    color: var(--text-color);
+}
+
+.alert-component .dropdown-item .alert-dropdown .alert-item.alert-seen,
+.alert-component .dropdown .dropdown-menu .has-link a .alert-dropdown .alert-item.alert-seen,
+.dropdown .dropdown-menu .has-link .alert-component a .alert-dropdown .alert-item.alert-seen {
+    background: var(--darker);
+}
+
+
+/*===== Main Page =====*/
+
+#wrapper #content .forumcategoryblock .forumcategoryheader {
+    background: var(--thread-bg-sticky);
+    border-color: var(--darker);
+}
+
+#wrapper #content .forumcategoryblock .forumcategoryheader .categorytitle,
+#wrapper #content .forumcategoryblock .forumcategoryheader .mdi {
+    color: var(--text-color);
+}
+
+body.page-forum .forumhead ul .content .subtitle,
+#wrapper #content .forumhead .title a {
+    color: var(--text-color);
+}
+
+#wrapper #content .forumhead {
+    border-color: var(--darker);
+}
+
+body.page-forum .forumpanel {
+    background: var(--thread-bg);
+}
+
+#wrapper #content .forumcategoryblock .forumpanel {
+    border-color: var(--darker);
+}
+
+#wrapper #content .forumcategoryblock .forumpanel:hover,
+#wrapper #content .forumcategoryblock .forumpanel:hover .postcount,
+#wrapper #content .forumcategoryblock .forumpanel:hover .forumlastpost {
+    background: var(--thread-bg-read);
+}
+
+#wrapper #content .forumcategoryblock .forumpanel .forumname .forumtitle {
+    color: var(--text-color);
+}
+
+#wrapper #content .forumcategoryblock .forumpanel .postcount,
+#wrapper #content .forumcategoryblock .forumpanel .forumlastpost {
+    background: var(--thread-bg);
+    border-color: var(--darker);
+}
+
+body.page-forum .forumblock .threadcount,
+body.page-forum .forumblock .postcount {
+    color: var(--text-color);
+}
+
+#wrapper #content .forumcategoryblock .forumcategoryblock .forumcategoryheader {
+    background: var(--thread-bg-sticky2);
+}
+
+#wrapper #content .forumcategoryblock .forumpanel .forumlastpost .threadname {
+    color: var(--text-color);
+}
+
+body.page-forum .forumblock .threadcount .label,
+body.page-forum .forumblock .postcount .label {
+    color: var(--text-dim-color);
+}
+
+.dropdown-content a.dropdown-item,
+.dropdown-content .dropdown .dropdown-menu .has-link a,
+.dropdown .dropdown-menu .has-link .dropdown-content a {
+    color: var(--text-color) !important;
+}
+
+
+/*===== Sub Forum View =====*/
+
+#wrapper #content .pagnation.threadpagnation,
+#wrapper #content .pagnation.postpagnation {
+    background: var(--thread-bg-sticky);
+}
+
+.pagnation.threadpagnation.above {
+    border-color: var(--darker);
+}
+
+#wrapper #content .pagnation.threadpagnation .page,
+#wrapper #content .pagnation.postpagnation .page {
+    color: var(--text-color);
+}
+
+#wrapper #content .pagnation.threadpagnation a.page.is-active,
+#wrapper #content .pagnation.postpagnation a.page.is-active,
+#wrapper #content .pagnation.threadpagnation a.page:hover,
+#wrapper #content .pagnation.postpagnation a.page:hover {
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+body.page-forum .threadlistsection .threadblock li.postcount,
+body.page-forum .threadlistsection .threadblock li.threadage {
+    color: var(--text-color);
+}
+
+body.page-forum .threadlistsection .threadblock li.postcount .label,
+body.page-forum .threadlistsection .threadblock li.threadage .label {
+    color: var(--text-dim-color);
+}
+
+body.page-forum .threadlistsection .threadblock,
+body.page-forum .threadlistsection .threadblock li.postcount,
+body.page-forum .threadlistsection .threadblock li.threadage,
+body.page-forum .threadpagnation.below {
+    border-color: var(--darker);
+}
+
+body.page-forum .threadlistsection .threadblock .threadmain .threadtitle .threadname {
+    color: var(--text-color);
+}
+
+
+/* == threads == */
+
+#wrapper #content .threadlist .threadblock {
+    background: var(--thread-bg);
+    color: var(--text-color);
+}
+
+#wrapper #content .threadlist .threadblock .threadlastpost {
+    border-color: var(--darker);
+    background: var(--thread-bg);
+}
+
+
+/* == threads with no new posts == */
+
+#wrapper #content .threadlist .threadblock.has-seen {
+    background: var(--thread-bg-read);
+}
+
+#wrapper #content .threadlist .threadblock.has-seen .threadlastpost {
+    background: var(--thread-bg-read);
+}
+
+
+/* == threads with new posts == */
+
+#wrapper #content .threadlist .threadblock.has-new-posts {
+    background: var(--thread-bg);
+}
+
+#wrapper #content .threadlist .threadblock.has-new-posts .threadlastpost {
+    background: var(--thread-bg);
+}
+
+#wrapper #content .threadlist .threadblock:hover,
+#wrapper #content .threadlist .threadblock:hover .threadage,
+#wrapper #content .threadlist .threadblock:hover .threadlastpost {
+    background: var(--thread-bg-read);
+}
+
+
+/* == stickies == */
+
+#wrapper #content .threadlist .threadblock.is-sticky,
+#wrapper #content .threadlist .threadblock.is-sticky:hover {
+    background: var(--thread-bg-sticky);
+    color: var(--text-color);
+    border-color: var(--darker);
+}
+
+#wrapper #content .threadlist .threadblock.is-sticky a,
+#wrapper #content .threadlist .threadblock.is-sticky .threadtitle .threadname,
+#wrapper #content .threadlist .threadblock.is-sticky .threadage,
+#wrapper #content .threadlist .threadblock.is-sticky .postcount {
+    color: var(--text-color) !important;
+    border-color: var(--darker);
+    background: var(--thread-bg-sticky);
+}
+
+
+/*===== Threads View =====*/
+
+.title {
+    color: var(--text-color);
+}
+
+.lastread {
+    background: var(--accent);
+    color: var(--text-color);
+    border-color: var(--darker);
+}
+
+body.page-forum .forumpanel {
+    background: var(--thread-bg);
+}
+
+.postrender .posthead {
+    background: var(--thread-bg);
+    color: var(--text-dim-color);
+}
+
+.postrender .posthead a,
+.postrender .posthead strong {
+    color: var(--text-dim-color);
+}
+
+#wrapper #content .postlist .forumpanel>.postmain .posthead,
+.pagnation.postpagnation.above,
+#wrapper #content .postlist .forumpanel,
+.postrender .postinner>.postuser,
+.pagnation.postpagnation.below {
+    border-color: var(--darker);
+}
+
+.postrender .postinner>.postuser.has-background-image:hover .background-image:after {
+    opacity: 0.1;
+}
+
+.postblock.postblock-read .postcontent,
+.postblock .postcontent,
+.threadreply .actions {
+    background: var(--thread-bg);
+    border-color: var(--darker);
+}
+
+.ql-editor,
+.ql-snow .ql-editor {
+    color: var(--text-dim-color);
+}
+
+.ql-container.ql-snow .ql-editor h1,
+.ql-container.ql-snow .ql-editor h2,
+.ql-container.ql-snow .ql-editor h3,
+.ql-container.ql-snow .ql-editor h4,
+.ql-container.ql-snow .ql-editor h5,
+.ql-container.ql-snow .ql-editor h6,
+.ql-container.ql-snow .ql-editor h7,
+.ql-container.ql-snow .ql-editor p {
+    color: var(--text-color);
+}
+
+.ql-container.ql-snow .ql-editor a {
+    color: var(--accent);
+}
+
+.ql-container.ql-snow .ql-editor postquote .head a {
+    color: var(--text-color);
+}
+
+.votes.detail {
+    background: var(--thread-bg);
+    border-color: var(--darker);
+}
+
+.ql-container.ql-snow {
+    border-color: var(--darker);
+}
+
+.postblock-read .postrender .postinner>.postuser .background-image:before,
+.postblock-read .postrender .postinner>.postuser .background-image:after,
+.postrender .postinner>.postuser .background-image:before,
+.postrender .postinner>.postuser .background-image:after {
+    background: linear-gradient(to bottom, rgba(48, 48, 48, var(--bg-opacity)) 420px, #303030 512px);
+}
+
+#wrapper #content .pagnation.threadpagnation a.page.is-spacer,
+#wrapper #content .pagnation.postpagnation a.page.is-spacer {
+    background: var(--thread-bg-sticky);
+}
+
+.postrender .postinner>.postuser .background-image {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: var(--thread-bg);
+}
+
+.ql-toolbar.ql-snow.toolbar button {
+    color: var(--text-dim-color);
+}
+
+.ql-snow .ql-editor strong {
+    color: inherit;
+}
+
+.is-dark.hero {
+    background-color: var(--thread-bg);
+    border-bottom: none;
+}
+
+.is-dark.hero .title {
+    color: var(--text-color);
+}
+
+.hero.is-small .hero-body {
+    background: var(--thread-bg);
+}
+
+.hero.is-dark .subtitle {
+    color: var(--text-dim-color);
+}
+
+.page-forum.usershop .coinshopbody .box {
+    border: 1px solid var(--text);
+    background-color: var(--darker);
+    color: var(--text);
+}
+
+.page-forum.usershop .coinshopbody button {
+    background: var(--gold);
+}
+
+.coins {
+    color: var(--gold);
+}
+
+.username.user-moderator.username.user-moderator a,
+.username.user-admin.username.user-admin a {
+    color: #58b958;
+}
+
+.username.user-gold a {
+    color: var(--gold);
+}
+
+.username a {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.251);
+}
+
+.dialog.modal.is-active .modal-card-body {
+    background-color: var(--thread-bg);
+}
+
+.modal-card-head:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('https://i.imgur.com/XV0nfZm.gif');
+    background-repeat: repeat;
+    left: 0;
+    opacity: 0.2;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.modal-card-foot:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('https://i.imgur.com/XV0nfZm.gif');
+    background-repeat: repeat;
+    left: 0;
+    opacity: 0.2;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.dialog .modal-card .modal-card-foot .button {
+    background: #441313;
+    color: var(--text-dim-color);
+}
+
+.dialog .modal-card .modal-card-foot .button.is-success {
+    background: var(--accent);
+    color: var(--darker);
+}
+
+.votes {
+    user-select: text;
+}
+
+.postuser .user-card {
+    background-color: var(--thread-bg);
+}
+
+
+/* gradient read/own post indicators */
+
+
+/* #wrapper #content .postlist .postblock .postmain .posthead {
+    box-shadow: inset 500px 0px 500px -500px var(--accent);
+}
+
+#wrapper #content .postlist .postblock-read .postmain .posthead {
+    box-shadow: inset 0 0 0 0 var(--accent);
+}
+
+#wrapper #content .postlist .postblock-own .postmain .posthead {
+    box-shadow: inset 450px 0px 500px -500px var(--gold);
+} */
+
+#wrapper #content .postlist .postblock .postmain .postinner .postuser .background-image:after {
+    box-shadow: inset 2px 0px 0px -1px var(--accent);
+}
+
+#wrapper #content .postlist .postblock-read .postmain .postinner .postuser .background-image:after {
+    box-shadow: inset 0 0 0 0 var(--accent);
+}
+
+#wrapper #content .postlist .postblock-own .postmain .postinner .postuser .background-image:after {
+    box-shadow: inset 2px 0px 0px -1px var(--gold);
+}
+
+
+/*===== misc =====*/
+
+#wrapper #content,
+.commit-years,
+.commit-months {
+    background: var(--thread-bg);
+}
+
+.commits .change-entry .time a,
+.tabs a,
+.tabs a:hover,
+.commit-months,
+.box,
+.hero.is-dark .subtitle strong {
+    color: var(--text-color);
+}
+
+.tabs li.is-disabled a,
+.roadmap .column .roadmap-child .title {
+    color: var(--text-dim-color);
+}
+
+.page-roadmap .columns .column .box {
+    background-color: var(--thread-bg);
+    border: 1px solid var(--darker);
+}
+
+.page-roadmap .columns .column .box.completed {
+    background-color: var(--thread-bg-read);
+}
+
+#wrapper #content .threadlist .threadblock .threadmain .pagnationcomponent .page {
+    color: var(--thread-bg);
+    background-color: var(--text-dim-color);
+}
+
+.unreadposts {
+    background-color: var(--thread-bg-read);
+    color: var(--gold);
+    border: none;
+    padding: 3px 3px;
+}
